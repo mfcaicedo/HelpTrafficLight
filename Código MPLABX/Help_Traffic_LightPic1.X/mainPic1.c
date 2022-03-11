@@ -225,7 +225,7 @@ void llamar_ultrasonico(uint16_t Distancia){
     Distancia = Obtener_Distancia(); 
     lcd_gotoxy(1,1);              // Position:  row 1, column 1.
     lcd_putc(" INFO ULTRASONICO "); // Message to screen LCD.
-    sprintf(LCD_Buffer,"Distancia: %03dcm", Distancia);//"Distancia" --> "LCD_Buffer".
+    sprintf(LCD_Buffer,"Distancia: %03dcm", Distancia+1);//"Distancia" --> "LCD_Buffer".
     lcd_gotoxy(2,1);              //Position: row 2, column 1
     lcd_putc(LCD_Buffer);         //Show buffer_lcd
     __delay_ms(200);   

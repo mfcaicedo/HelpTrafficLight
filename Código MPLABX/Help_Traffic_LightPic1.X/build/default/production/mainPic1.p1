@@ -1466,8 +1466,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mainPic1.c: 227:     lcd_putc(" INFO ULTRASONICO ");
 [e ( _lcd_putc (1 :s 5C ]
 "228
-[; ;mainPic1.c: 228:     sprintf(LCD_Buffer,"Distancia: %03dcm", Distancia);
-[e ( _sprintf (1 , (. , -> &U _LCD_Buffer `*uc :s 6C -> _Distancia `ui ]
+[; ;mainPic1.c: 228:     sprintf(LCD_Buffer,"Distancia: %03dcm", Distancia+1);
+[e ( _sprintf (1 , (. , -> &U _LCD_Buffer `*uc :s 6C + -> _Distancia `ui -> -> 1 `i `ui ]
 "229
 [; ;mainPic1.c: 229:     lcd_gotoxy(2,1);
 [e ( _lcd_gotoxy (2 , -> -> 2 `i `uc -> -> 1 `i `uc ]
